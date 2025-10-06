@@ -10,7 +10,7 @@ Double saldo;
 		// TODO Auto-generated constructor stub
 	}
 	public void retirar(Double i) {
-		saldo=-500.0;
+		saldo-=i;
 		
 	}
 	public Double getSaldo() {
@@ -18,8 +18,12 @@ Double saldo;
 		return saldo;
 	}
 	public void ingresar(Double i) {
-		saldo=500.0;
+		saldo+= i;
 		
+	}
+	public void setSaldo(Double i) {
+		// TODO Auto-generated method stub
+		saldo=i;
 	}
 
 }
