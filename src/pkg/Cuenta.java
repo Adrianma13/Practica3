@@ -4,13 +4,20 @@ public class Cuenta {
 String mNumero;
 String nTitular;
 Double saldo;
-	public Cuenta(double saldo) {
+	public Cuenta(double saldo,String nombreCuenta) {
 		this.saldo = saldo;
+		this.mNumero=nombreCuenta;
 		
 		// TODO Auto-generated constructor stub
 	}
 	public void retirar(Double i) {
-		saldo-=i;
+		if(saldo-i<-500) {
+			System.out.println("Fondos insuficientes (saldo "+saldo+") en la "+
+						mNumero+" para el reintegro de "+i+"euros");
+		}else {
+			saldo-=i;
+		}
+		
 		
 	}
 	public Double getSaldo() {

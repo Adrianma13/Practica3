@@ -17,7 +17,7 @@ class CuentaTest {
 	private Cuenta cuenta67890;
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
-		cuenta=new Cuenta(0);
+		cuenta=new Cuenta(0,"cuenta");
 		
 	}
 
@@ -46,8 +46,8 @@ class CuentaTest {
 	}
 	@Test
 	void test0014() {
-		cuenta12345=new Cuenta(50);
-		cuenta67890=new Cuenta(0);
+		cuenta12345=new Cuenta(50,"12345");
+		cuenta67890=new Cuenta(0,"67890");
 		
 		cuenta12345.retirar(200.0);
 		cuenta67890.retirar(350.0);
